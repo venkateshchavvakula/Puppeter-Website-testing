@@ -7,50 +7,52 @@ var fs = require('fs');
     let browserInstance = await browserObject.startBrowser();
     // Pass the browser instance to the scraper controller
     // scraperController(browserInstance)
-    let categories = JSON.parse(fs.readFileSync('./categories_products.json', 'utf8'));
-    console.log(categories.length, 'total')
-    let count = 0
+    let categories = JSON.parse(fs.readFileSync('./products.json', 'utf8'));
+    for(let cat of categories) {
+        for(let product of cat.products) {
+            if(product.info && product.info.isError) {
+                let page = await browserInstance.newPage();
+                // console.log(`Navigating to ${this.url}...`);
+                // Navigate to the selected page
+                await page.goto(product.link);
 
-    let pagePromise = (link) => new Promise(async (resolve, reject) => {
-        let dataObj = []
-        let newPage = await browserInstance.newPage();
-        await newPage.goto(link);
-        await newPage.waitForSelector("#page");
-        let data = {}
-        data['src'] = await newPage.$eval('.row .col-lg-6', el => el.querySelector('img') ? el.querySelector('img').src : '')
-        data['srcset'] = await newPage.$eval('.row .col-lg-6', el => el.querySelector('img') ? el.querySelector('img').srcset : '')
-        data['alt'] = await newPage.$eval('.row .col-lg-6', el => el.querySelector('img') ? el.querySelector('img').alt : '')
-        try {
-            await newPage.$eval('.row .col-lg-5 .prod-wrapper', el => el.innerText);
-            data['desc'] = await newPage.$eval('.row .col-lg-5 .prod-wrapper', el => el.innerText)
-
-        } catch (e) {
-            data['isError'] = true
-        }
-
-        resolve(data);
-        await newPage.close();
-    });
-
-    for (let category of categories) {
-        category['sub']=false;
-        for (let product of category.products) {
-            count++;
-            // if (product.link.includes('products')) {
-                try {
-                    let currentPageData = await pagePromise(product.link);
-                    product['info'] = currentPageData
-                } catch(e) {
-                    category['sub']=true
-                }
-               
-            // } 
-            console.log(product.name, count)
+                break
+            }
+            break
         }
     }
 
-    fs.writeFile("products.json", JSON.stringify(categories), function (err) {
-        if (err) throw err;
-        console.log("Saved!");
-    });
+         // Loop through each of those links, open a new page instance and get the relevant data from them
+         let pagePromise = (link) => new Promise(async (resolve, reject) => {
+            let dataObj = []
+            let newPage = await browser.newPage();
+            await newPage.goto(link);
+            await newPage.waitForSelector("#page");
+            dataObj = await newPage.$$eval('.row .col-xs-6', element => {
+                let data = []
+                element.forEach(el => {
+                    data.push({
+                        name: el.querySelector('h2') ? el.querySelector('h2').innerText.replace(/%20/g, " ") : el.querySelector('h6').innerText.replace(/%20/g, " "),
+                        image_url: el.querySelector('img').src,
+                        image_alt: el.querySelector('img').alt,
+                        link: el.querySelector('a').href
+                    })
+                });
+                return data;
+            });
+            resolve(dataObj);
+            await newPage.close();
+        });
+
+        for (let data of urls) {
+            let currentPageData = await pagePromise(data.link);
+            let category = {
+                name: data.name,
+                link: data.link,
+                products: currentPageData
+            }
+            scrapedData.push(category);
+            // console.log(currentPageData);
+        }
+
 })();
