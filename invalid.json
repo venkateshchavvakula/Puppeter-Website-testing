@@ -20,5 +20,155 @@
         "sub_categories": [
 
         ]
+    },
+    {
+        "name": " Hygiene and Skincare ",
+        "link": "https://www.eternalmark.com/hygiene-and-skincare",
+        "products":[
+            {
+                "name": "Lubricating Jelly",
+                "image_url": "https://www.eternalmark.com/hygiene-and-skincare/",
+                "image_alt": "",
+                "link": "http://socialdna.in/em/products/?tag=hs&title=Hygiene%20and%20Skincare&set=Lubricating%20Jelly",
+                "info": {
+                    "src": "",
+                    "srcset": "",
+                    "alt": "",
+                    "isError": true
+                }
+            },
+            {
+                "name": "Lubricating Jelly",
+                "image_url": "https://www.eternalmark.com/hygiene-and-skincare/",
+                "image_alt": "",
+                "link": "http://socialdna.in/em/products/?tag=hs&title=Hygiene%20and%20Skincare&set=Lubricating%20Jelly",
+                "info": {
+                    "src": "",
+                    "srcset": "",
+                    "alt": "",
+                    "isError": true
+                }
+            },
+            {
+                "name": "Lubricating Jelly",
+                "image_url": "https://www.eternalmark.com/hygiene-and-skincare/",
+                "image_alt": "",
+                "link": "http://socialdna.in/em/products/?tag=hs&title=Hygiene%20and%20Skincare&set=Lubricating%20Jelly",
+                "info": {
+                    "src": "",
+                    "srcset": "",
+                    "alt": "",
+                    "isError": true
+                }
+            },
+            {
+                "name": "Lubricating Jelly",
+                "image_url": "https://www.eternalmark.com/hygiene-and-skincare/",
+                "image_alt": "",
+                "link": "http://socialdna.in/em/products/?tag=hs&title=Hygiene%20and%20Skincare&set=Lubricating%20Jelly",
+                "info": {
+                    "src": "",
+                    "srcset": "",
+                    "alt": "",
+                    "isError": true
+                }
+            },
+            {
+                "name": "Lubricating Jelly",
+                "image_url": "https://www.eternalmark.com/hygiene-and-skincare/",
+                "image_alt": "",
+                "link": "http://socialdna.in/em/products/?tag=hs&title=Hygiene%20and%20Skincare&set=Lubricating%20Jelly",
+                "info": {
+                    "src": "",
+                    "srcset": "",
+                    "alt": "",
+                    "isError": true
+                }
+            },
+            {
+                "name": "Lubricating Jelly",
+                "image_url": "https://www.eternalmark.com/hygiene-and-skincare/",
+                "image_alt": "",
+                "link": "http://socialdna.in/em/products/?tag=hs&title=Hygiene%20and%20Skincare&set=Lubricating%20Jelly",
+                "info": {
+                    "src": "",
+                    "srcset": "",
+                    "alt": "",
+                    "isError": true
+                }
+            },
+            {
+                "name": "Ultrasound Gel",
+                "image_url": "https://www.eternalmark.com/hygiene-and-skincare/",
+                "image_alt": "",
+                "link": "http://socialdna.in/em/products/?tag=hs&title=Hygiene%20and%20Skincare&set=Ultrasound%20Gel",
+                "info": {
+                    "src": "",
+                    "srcset": "",
+                    "alt": "",
+                    "isError": true
+                }
+            },
+            {
+                "name": "Ultrasound Gel",
+                "image_url": "https://www.eternalmark.com/hygiene-and-skincare/",
+                "image_alt": "",
+                "link": "http://socialdna.in/em/products/?tag=hs&title=Hygiene%20and%20Skincare&set=Ultrasound%20Gel",
+                "info": {
+                    "src": "",
+                    "srcset": "",
+                    "alt": "",
+                    "isError": true
+                }
+            },
+            {
+                "name": "Ultrasound Gel",
+                "image_url": "https://www.eternalmark.com/hygiene-and-skincare/",
+                "image_alt": "",
+                "link": "http://socialdna.in/em/products/?tag=hs&title=Hygiene%20and%20Skincare&set=Ultrasound%20Gel",
+                "info": {
+                    "src": "",
+                    "srcset": "",
+                    "alt": "",
+                    "isError": true
+                }
+            },
+            {
+                "name": "Ultrasound Gel",
+                "image_url": "https://www.eternalmark.com/hygiene-and-skincare/",
+                "image_alt": "",
+                "link": "http://socialdna.in/em/products/?tag=hs&title=Hygiene%20and%20Skincare&set=Ultrasound%20Gel",
+                "info": {
+                    "src": "",
+                    "srcset": "",
+                    "alt": "",
+                    "isError": true
+                }
+            },
+            {
+                "name": "Diaper Rash Ointment",
+                "image_url": "https://www.eternalmark.com/wp-content/uploads/2019/02/dro0050.jpg",
+                "image_alt": "",
+                "link": "http://socialdna.in/em/products/?tag=hs&title=Hygiene%20and%20Skincare&set=Diaper%20Rash%20Ointment",
+                "info": {
+                    "src": "",
+                    "srcset": "",
+                    "alt": "",
+                    "isError": true
+                }
+            },
+            {
+                "name": "2 in 1 Shampoo & Body Wash",
+                "image_url": "https://www.eternalmark.com/wp-content/uploads/2019/02/sbw0118-2.jpg",
+                "image_alt": "",
+                "link": "http://socialdna.in/em/products/?tag=hs&title=Hygiene%20and%20Skincare&set=2%20in%201%20Shampoo%20&%20Body%20Wash",
+                "info": {
+                    "src": "",
+                    "srcset": "",
+                    "alt": "",
+                    "isError": true
+                }
+            }
+        ]
     }
 ]
